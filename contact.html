@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact </title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="new-arrival.html">New Arrivals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="toggle-theme">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <h2>Send Us a Message</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lith-footies. All rights reserved.</p>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <!-- EmailJS Integration -->
+  <script>
+    (function () {
+      emailjs.init("yOHsxPQoMVdpD4uwH"); // Your public key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      emailjs.send("service_15mz63x", "template_gvt11dv", {
+        from_name: name,
+        from_email: email,
+        message: message
+      })
+      .then(() => {
+        alert("✅ Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      })
+      .catch((error) => {
+        console.error("❌ Email send error:", error);
+        alert("❌ Message failed to send. Check console for details.");
+      });
+    });
+  </script>
+</body>
+</html>
