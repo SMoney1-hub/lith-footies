@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shoe Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Lith Footies </h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="new-arrival.html">New Arrivals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="toggle-theme">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Step into Style</h2>
+      <p>Explore the freshest wears the season </p>
+      <button>Shop Now</button>
+    </div>
+  </section>
+
+  <section class="products">
+    <h2>Featured Wears</h2>
+    <div class="product-grid">
+      <div class="product-card" data-name="Nike Air Max" data-price="$120" data-img="https://via.placeholder.com/400x300">
+        <img src="img1.jpg"Nike Air Max">
+        <h3>Palm slippers</h3>
+       
+        <button class="view-btn">View</button>
+      </div>
+      <div class="product-card" data-name="Adidas UltraBoost" data-price="$150" data-img="https://via.placeholder.com/400x300">
+        <img src="half.jpeg"Adidas UltraBoost">
+        <h3>Half shoe</h3>
+        
+        <button class="view-btn">View</button>
+      </div>
+      <div class="product-card" data-name="Puma RS-X" data-price="$100" data-img="https://via.placeholder.com/400x300">
+        <img src="palm.jpeg" alt="Puma RS-X">
+        <h3>Slippers</h3>
+        
+        <button class="view-btn">View</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Modal -->
+  <div class="modal" id="product-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-img" src="" alt="Product">
+      <h3 id="modal-title"></h3>
+      <p id="modal-price"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Lith-footies. All rights reserved.</p>
+  </footer>
+  <!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
