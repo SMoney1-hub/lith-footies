@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Arrivals - SneakerHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Lith Footies </h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="new-arrival.html">New Arrivals</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="toggle-theme">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="products">
+    <h2>New Arrivals</h2>
+    <div class="product-grid">
+      <div class="product-card" data-name="Nike Dunk Low" data-price="$130" data-img="https://via.placeholder.com/400x300">
+        <img src="palm.jpeg" alt="Nike Dunk Low">
+        <h3>Slippers</h3>
+        
+        <button class="view-btn">View</button>
+      </div>
+      <div class="product-card" data-name="Yeezy Boost 350" data-price="$220" data-img="https://via.placeholder.com/400x300">
+        <img src="img1.jpg" alt="Yeezy Boost 350">
+        <h3>Palm slippers</h3>
+        
+        <button class="view-btn">View</button>
+      </div>
+      <div class="product-card" data-name="Jordan 1 Retro" data-price="$180" data-img="https://via.placeholder.com/400x300">
+        <img src="half.jpeg" alt="Jordan 1 Retro">
+        <h3>Half shoe</h3>
+        
+        <button class="view-btn">View</button>
+      </div>
+      <div class="product-card" data-name="New Balance 550" data-price="$110" data-img="https://via.placeholder.com/400x300">
+        <img src="img4.jpg" alt="New Balance 550">
+        <h3>Palm</h3>
+        
+        <button class="view-btn">View</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Reused -->
+  <div class="modal" id="product-modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <img id="modal-img" src="" alt="Product">
+      <h3 id="modal-title"></h3>
+      <p id="modal-price"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Lith-footies. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
